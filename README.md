@@ -25,7 +25,7 @@ Unofficial: not affiliated with or endorsed by PeriPage. The raccoon is a parody
 ## Will it work for me?
 | You need | Details |
 |---|---|
-| Printer | **PeriPage A6, 203 dpi.** Tested with firmware V1.11. Other models are refused for now. |
+| Printer | **PeriPage A6, 203 dpi, firmware V1.11.** That's the only one we've tested, so it's the only one we expect to work for now. Tried another firmware version? [Tell us if it works](https://github.com/impascab/raccoonprint/issues/new/choose) and I'll add it here. (The app stops with a message if the printer isn't 203 dpi.) |
 | Mac | Apple silicon (M1 or newer), macOS 14 or newer |
 
 Not sure which A6 you have? Click **Check printer**: it tells you if yours isn't supported.
