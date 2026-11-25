@@ -159,8 +159,15 @@ enum Encoder {
     static func preview(_ b: Bitmap, strength: Int) -> CGImage? {
         let w = b.width, h = b.height, k = max(0, min(2, strength))
         // Greys by neighbour count, in half steps 0...12 (6 = all eight neighbours black, diagonals count half).
-        let black = (0...12).map { UInt8(255 - (255 - solid[k]) * (alone[k] + (1 - alone[k]) * Float($0) / 12)) }
-        let white = (0...12).map { UInt8(max(solid[k], 255 - fill[k] * powf(Float($0) / 12, 2.5))) }
+        let ink: Float = solid[k], weak: Float = alone[k], heat: Float = fill[k]
+        var black = [UInt8](), white = [UInt8]()
+        for i in 0...12 {
+            let part: Float = Float(i) / 12
+            let cover: Float = weak + (1 - weak) * part
+            black.append(UInt8(255 - (255 - ink) * cover))
+            let spread: Float = heat * powf(part, 2.5)
+            white.append(UInt8(max(ink, 255 - spread)))
+        }
         var o = [UInt8](repeating: 255, count: w * h)
         b.px.withUnsafeBufferPointer { px in
             for y in 0..<h { for x in 0..<w {
