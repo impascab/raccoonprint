@@ -8,6 +8,9 @@
 
 Unofficial: not affiliated with or endorsed by PeriPage. The raccoon is a parody.
 
+> [!NOTE]
+> All the code in this app was written by Claude (Anthropic's AI). I tested it on a physical PeriPage A6.
+
 <p align="center"><img src="docs/light.png" width="560" alt="RaccoonPrint window with a raccoon picture ready to print"></p>
 
 | Text, even sideways | Dark theme |
@@ -73,7 +76,7 @@ RaccoonPrint would not exist without these projects. The Swift code was written 
 - **[peripage-tool](https://github.com/elkusbry/peripage-tool)** by Bryan Elkus (MIT): sending an image as one continuous raster, the final paper feed, and notes on print speed.
 - **[peripage-A6-bluetooth](https://github.com/eliasweingaertner/peripage-A6-bluetooth)** by Elias Weingärtner: the original reverse engineering that peripage-python continues. Not used directly.
 
-Licence texts and notices: [THIRD_PARTY.md](THIRD_PARTY.md). Written with the help of Claude (Anthropic).
+Licence texts and notices: [THIRD_PARTY.md](THIRD_PARTY.md). Code written by Claude (Anthropic).
 
 ## License
 [GPL-3.0](LICENSE)
